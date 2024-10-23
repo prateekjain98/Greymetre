@@ -38,10 +38,10 @@ if (content) {
     <section class="section">
       <div class="container">
         <div class="row">
-          <div class="mx-auto text-center lg:col-8" data-aos="fade-up-sm">
+          <div class="mx-auto text-center flex flex-col items-center lg:col-8" data-aos="fade-up-sm">
             {subtitle && (
               <p
-                class="mb-2 font-medium text-tertiary"
+                class="mb-2 text-black font-medium px-4 py-1 bg-[#ACD4FF] w-fit border-2 border-white rounded-full drop-shadow-lg "
                 set:html={markdownify(subtitle)}
               />
             )}

@@ -16,7 +16,7 @@ function replaceYear(text: string) {
 }
 ---
 
-<footer class="bg-theme-light py-16 xl:py-28">
+<footer class="bg-gradient-to-t from-[#ffffff] from-0% via-50% to-[#e9f4ff] to-100% py-16 xl:py-22 ">
   <div class="container" data-aos="fade-up-sm">
     <div class="row gy-6 justify-between lg:g-4">
       <div class="sm:col-6 lg:col-4 lg:pe-16">
@@ -26,8 +26,12 @@ function replaceYear(text: string) {
         {
           config.params.footer_description && (
             <p
-              class="mb-2.5 lg:mb-20"
+              class="mb-2.5 font-bold text-xl"
               set:html={markdownify(config.params.footer_description)}
+            />
+            <p
+              class="text-sm mb-2.5 lg:mb-14"
+              set:html={markdownify(config.params.footer_gst)}
             />
           )
         }
@@ -37,7 +41,7 @@ function replaceYear(text: string) {
         <div
           class="flex flex-wrap gap-y-6 sm:flex-nowrap md:justify-end lg:justify-around">
           <div class="w-[160px]">
-            <h3 class="mb-4 pt-2 text-base text-dark md:mb-9">Resources</h3>
+            <h3 class="mb-4 pt-2 text-lg font-semibold text-dark md:mb-9">Company</h3>
             <ul class="flex flex-col gap-3">
               {
                 footer_menu.map((item) => (
@@ -53,7 +57,7 @@ function replaceYear(text: string) {
             </ul>
           </div>
           <div class="w-[160px]">
-            <h3 class="mb-4 pt-2 text-base text-dark md:mb-9">Quick Info</h3>
+            <h3 class="mb-4 pt-2 text-lg font-semibold text-dark md:mb-9">Support</h3>
             <ul class="flex flex-col gap-3">
               {
                 footer_quick_links.map((item) => (
@@ -70,7 +74,8 @@ function replaceYear(text: string) {
           </div>
         </div>
       </div>
-      {
+      
+      <!-- {
         (
           <div class="sm:col-7 md:col-6 lg:col-4">
             {config.subscription &&
@@ -115,7 +120,18 @@ function replaceYear(text: string) {
             )}
           </div>
         )
-      }
+      } -->
     </div>
+  </div>
+  <div class="fixed bottom-0 left-0 w-full flex items-center justify-center gap-4 mb-2">
+    <p>
+      All rights reserved
+    </p>
+    {config.params.copyright && (
+      <div
+        class="" 
+        set:html={markdownify(replaceYear(config.params.copyright))}
+      />
+    )}
   </div>
 </footer>

@@ -4,10 +4,10 @@
     "base_url": "https://fortify-astro.vercel.app",
     "base_path": "/",
     "trailing_slash": true,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.svg",
-    "logo_width": "134",
-    "logo_height": "47",
+    "favicon": "/images/greymetre_logo.png",
+    "logo": "/images/greymetre_logo.png",
+    "logo_width": "182",
+    "logo_height": "72",
     "logo_text": "Fortify"
   },
 
@@ -19,8 +19,9 @@
 
   "params": {
     "contact_form_action": "#",
-    "footer_description": "Securing Your Digital World: Your Trusted Partner in Data Protection with Cutting Edge Solutions for Data Security.",
-    "copyright": "Copyright © {year} Fortify. All Rights Reserved"
+    "footer_description": "Greymetre Consultants Pvt. Ltd.",
+    "footer_gst": "GSTIN: QQERWERTWTAFDSFD",
+    "copyright": "Copyright © {year} by Greymetre"
   },
 
   "subscription": {
@@ -32,7 +33,7 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "Book a Call",
     "link": "/contact/"
   },
 

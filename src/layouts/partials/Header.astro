@@ -135,15 +135,15 @@ const { pathname } = Astro.url;
         {
           navigation_button.enable && (
             <a
-              class="btn btn-dark hidden lg:flex"
+              class="btn bg-[#336AEA] text-white hidden rounded-2xl lg:flex"
               href={navigation_button.link}>
               {navigation_button.label}
               <span class="icon-wrapper">
                 <span class="icon">
-                  <DynamicIcon icon={"FaArrowRight"} />
+                  <DynamicIcon icon={"FaArrowRight"} color="white" />
                 </span>
                 <span class="icon" aria-hidden="true">
-                  <DynamicIcon icon={"FaArrowRight"} />
+                  <DynamicIcon icon={"FaArrowRight"} color="white" />
                 </span>
               </span>
             </a>
@@ -156,7 +156,7 @@ const { pathname } = Astro.url;
   {/* Show Only In Home Page */}
   {banner && <HomeBanner />}
 
-  <div aria-hidden="true">
+  <!-- <div aria-hidden="true">
     <ImageMod
       class="pointer-events-none absolute top-0 -z-10 h-full w-full object-cover object-top"
       src={Astro.url.pathname === "/"
@@ -165,5 +165,5 @@ const { pathname } = Astro.url;
       alt="header image"
       format="webp"
     />
-  </div>
+  </div> -->
 </div>

@@ -1,0 +1,296 @@
+---
+// src/components/Gallery.astro
+
+---
+<div class="w-full mt-20">
+  <div class="mx-auto text-center flex flex-col items-center lg:col-10" data-aos="fade-up-sm">  
+      <p class="mb-2 text-black font-medium px-4 py-1 bg-[#ACD4FF] w-fit border-2 border-white rounded-full drop-shadow-lg ">
+        Strategic Solutions for Sustainable Growth
+      </p>
+      <h2 class="mb-6" >
+        Expert Guidance for <br>
+        Business Transformation
+      </h2>
+      <p  class="text-lg/[inherit]">
+        Our consultancy offers expert insights and tailored strategies to overcome challenges, optimize operations, and drive growth. We deliver actionable solutions that turn your vision into reality, ensuring long-term success and scalability.
+      </p>
+  </div>
+</div>
+<div class="gallery bg-white relative">
+  
+  <div class="right">
+    <!-- mobile content -->
+    <div class="mobileContent">
+      <div class="mobilePhoto red"></div>
+      <h1>Red</h1>
+      <p>Red is a color often associated with strong emotions such as passion, love, and anger. It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.</p>
+      <div class="mobilePhoto green"></div>
+      <h1>Green</h1>
+      <p>Green is a color that is often associated with nature, growth, and harmony. It is a calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color psychology, green is said to represent balance and stability, making it a popular choice for branding and marketing in the health and wellness industry.</p>
+      <div class="mobilePhoto pink"></div>
+      <h1>Pink</h1>
+      <p>Pink is a color that is often associated with femininity, romance, and sweetness. It is a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing.</p>
+      <div class="mobilePhoto blue"></div>
+      <h1>Blue</h1>
+      <p>Blue is a color that is often associated with calmness, trust, and reliability. It is a peaceful and serene color that can evoke feelings of stability, security, and professionalism. In color psychology, blue is said to represent loyalty and trust, making it a popular choice for branding and marketing in the finance and technology industries.</p>
+    </div>
+    <!-- desktop content -->
+    <div class="desktopPhotos">
+      <div class="desktopPhoto red">
+        <img src="/images/firstpic.png" alt="Red" class="w-full h-full object-cover">
+      </div>
+      <div class="desktopPhoto green">
+        <img src="/images/secondPic.jpg" alt="Green" class="w-full h-full object-cover">
+      </div>
+      <div class="desktopPhoto pink">
+        <img src="/images/thirdPic.jpg" alt="Pink" class="w-full h-full object-cover">
+      </div>
+      <div class="desktopPhoto blue">
+        <img src="/images/fourthPic.jpg" alt="Blue" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="scroller">
+    <div class="scroller-line"></div>
+    <div class="scroller-indicator"></div>
+  </div> -->
+
+
+  <div class="left">
+    <div class="desktopContent">
+      <div class="desktopContentSection">
+        <div class="flex items-start gap-8">
+          <span class="number text-4xl">01</span>
+          <div class="header flex flex-col w-full">
+            <h1 class="text-start">Customer Loyalty</h1>
+            <span class="text-xl text-start w-full mt-8 font-semibold leading-none">Empowering Global Brands with <br>
+              Next-Gen Loyalty Solutions
+            </span>
+            <p class="mt-8">Seamlessly integrating personalized experiences, real-time  data analytics, and customer engagement strategies to drive sustainable growth and build lasting relationships worldwide.</p>
+          </div>
+        </div>
+      </div>
+      <div class="desktopContentSection">
+        <div class="flex items-start gap-8">
+          <span class="number text-4xl">02</span>
+          <div class="header flex flex-col w-full">
+            <h1 class="text-start">Customer Loyalty</h1>
+            <span class="text-xl text-start w-full mt-8 font-semibold leading-none">Empowering Global Brands with <br>
+              Next-Gen Loyalty Solutions
+            </span>
+            <p class="mt-8">Seamlessly integrating personalized experiences, real-time  data analytics, and customer engagement strategies to drive sustainable growth and build lasting relationships worldwide.</p>
+          </div>
+        </div>
+      </div>
+      <div class="desktopContentSection">
+        <div class="flex items-start gap-8">
+          <span class="number text-4xl">03</span>
+          <div class="header flex flex-col w-full">
+            <h1 class="text-start">Customer Loyalty</h1>
+            <span class="text-xl text-start w-full mt-8 font-semibold leading-none">Empowering Global Brands with <br>
+              Next-Gen Loyalty Solutions
+            </span>
+            <p class="mt-8">Seamlessly integrating personalized experiences, real-time  data analytics, and customer engagement strategies to drive sustainable growth and build lasting relationships worldwide.</p>
+          </div>
+        </div>
+      </div>
+      <div class="desktopContentSection">
+        <div class="flex items-start gap-8">
+          <span class="number text-4xl">04</span>
+          <div class="header flex flex-col w-full">
+            <h1 class="text-start">Customer Loyalty</h1>
+            <span class="text-xl text-start w-full mt-8 font-semibold leading-none">Empowering Global Brands with <br>
+              Next-Gen Loyalty Solutions
+            </span>
+            <p class="mt-8">Seamlessly integrating personalized experiences, real-time  data analytics, and customer engagement strategies to drive sustainable growth and build lasting relationships worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+.scroller {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    bottom: 40%;
+    width: 2px;
+    transform: translateX(-50%);
+  }
+
+  .scroller-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+  }
+
+  .scroller-indicator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 50px;
+    background-color:  #336aea;;
+    border-radius: 2rem;
+    transform: translate(-50%, -50%);
+  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.number {
+  font-size: 1.2em; /* Adjust size as needed */
+}
+.gallery h1 {
+  font-size: clamp(2em, 4vw, 6em);
+  width: 100%;
+}
+.gallery p {
+  font-size: 1rem;
+  line-height: 1;
+}
+.gallery {
+  display: flex;	
+}
+.left {
+  width: 50%;
+}
+.right {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desktopContent {
+  margin-right: auto;
+  margin-left: 10%;
+  width: 80%;
+}
+.desktopContentSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.desktopPhotos {
+  width: 30vw;
+  height: 60vh;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.desktopPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* .red {
+  background: crimson;
+}
+.green {
+  background: MediumSeaGreen;
+}
+.blue {
+  background: dodgerblue;
+}
+.pink {
+  background: deepPink;
+} */
+/* small screen / mobile layout */
+.mobileContent {
+  display: none;
+  width: 80vw;
+}
+.mobilePhoto {
+  width: 80vw;
+  height: 80vw;
+  margin-top: 5em;
+  border-radius: 6vw;
+}
+/* defines styles for screens up to 599px wide */
+@media screen and (max-width: 599px) {
+  .left {
+    display: none;
+  }
+  
+  .right {
+    height: auto;
+    width: 100%;
+    align-items: center;	
+  }	
+	
+  .desktopPhotos {
+    display: none;
+  }
+	
+  .mobileContent {
+    display: block;
+  }
+}
+</style>
+
+<script>
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+  const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
+  const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+  gsap.set(photos, { yPercent: 101 });
+  const allPhotos = gsap.utils.toArray(".desktopPhoto");
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 600px)", () => {
+    console.log("desktop");
+    
+    ScrollTrigger.create({
+      trigger: ".gallery",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".right"
+    });
+
+    gsap.to(".scroller-indicator", {
+    y: () => document.querySelector('.scroller-line').clientHeight - document.querySelector('.scroller-indicator').clientHeight,
+    // y: 100,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".left",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 4,
+    },
+    
+  });
+
+    details.forEach((detail, index) => {
+      let headline = detail.querySelector("h1");
+      let animation = gsap.timeline()
+        .to(photos[index], { yPercent: 0 })
+        .set(allPhotos[index], { autoAlpha: 0 });
+      ScrollTrigger.create({
+        trigger: headline,
+        start: "top 80%",
+        end: "top 40%",
+        animation: animation,
+        scrub: true,
+      });
+    });
+  });
+</script>

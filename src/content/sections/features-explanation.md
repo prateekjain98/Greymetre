@@ -1,8 +1,8 @@
 ---
-subtitle: "Features Explained"
-title: "Interactive Chart Displays Key Metrics and Trends."
-description: "Your Trusted Partner in Data Protection with Cutting-Edge Solutions <br> for Comprehensive Data Security."
-image: "/images/features/product.png"
+subtitle: "Empowering Growth with Cutting-Edge Solutions"
+title: "Innovative Tailored Products for Your Business Needs"
+description: "Discover a diverse range of products designed to drive innovation and efficiency across your operations. Our offerings are crafted with precision and tailored to solve the unique challenges of your industry. Whether you're looking for advanced technology tools, streamlined solutions."
+image: "/images/productImage.png"
 list:
   - row:
       - title: "Security Status Indicator"

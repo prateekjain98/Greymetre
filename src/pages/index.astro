@@ -8,15 +8,19 @@ import FeaturesExplanation from "@/partials/FeaturesExplanation.astro";
 import PricingSection from "@/partials/PricingSection.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import CallToAction from "@/partials/CallToAction.astro";
+import StickySection from "@/partials/StickySection.astro";
+import Faqs from "@/_components/Faqs.astro";
 ---
 
 <Base>
   {/* Home Page Banner Located in `Header.astro` file */}
   <Clients />
   <HowItWorks />
+  <StickySection />
   <FeaturesGrid />
   <Features />
   <FeaturesExplanation />
+  <Faqs/>
   <PricingSection />
   <Testimonial visible_testimonial={3} />
   <CallToAction />

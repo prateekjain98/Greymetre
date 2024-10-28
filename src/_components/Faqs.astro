@@ -1,0 +1,130 @@
+---
+// FAQAccordion.astro
+// interface FAQItem {
+//   question: string;
+//   answer: string;
+// }
+
+// interface Props {
+//   title: string;
+//   faqs: FAQItem[];
+// }
+
+// const { title, faqs } = Astro.props;
+
+
+const faqsData1=[
+    {
+        question: "What industries can use your products?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    },{
+        question: "How secure it the data?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    },{
+        question: "How does Billing work?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    }
+]
+
+const faqsData2=[
+    {
+        question: "What is Loyalty engine?",
+        answer: "Our Loyalty Engine helps create custom loyalty programs, driving customer retention and repeat business "
+    },
+    {
+        question: "Can loyalty programs be customized?",
+        answer: "SFA automates sales tasks, streamlining workflows and enhancing team productivity."
+    },
+    {
+
+    }
+]
+---
+
+<div class="faq-accordion w-screen h-full">
+  <h2 class="text-center w-full text-nowrap">Frequently Asked Questions</h2>
+  <p class="text-center text-sm">Quick answer to questions you might have</p>
+  <div class="mt-20">
+    <p class="text-start text-xl mb-10 font-bold">How to start with Greymetre ?</p>
+      {faqsData1.map((faq, index) => (
+        <div class="accordion bg-white">
+          <button class="accordion-header" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <span>{faq.question}</span>
+          </button>
+          <div class="accordion-content">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+  </div>
+  <div class="mt-20">
+    <p class="text-start text-xl mb-10 font-bold">What is Loyalty engine?</p>
+      {faqsData1.map((faq, index) => (
+        <div class="accordion bg-white">
+          <button class="accordion-header" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <span>{faq.question}</span>
+          </button>
+          <div class="accordion-content">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+  </div>
+
+  <h2></h2>
+</div>
+
+<style>
+  .faq-accordion {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .accordion {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .accordion-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  .accordion-content p {
+    padding: 1rem 0;
+  }
+</style>
+
+<script>
+  function initAccordions() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling as HTMLElement;
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+        
+        header.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+        content.style.maxHeight = isExpanded ? '0' : `${content.scrollHeight}px`;
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initAccordions);
+</script>
